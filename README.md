@@ -6,7 +6,8 @@ A tiny end-to-end app for beginners: paste notes → get AI-generated Q/A → fl
 
 ### 1) Clone and install
 ```bash
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python -m venv .venv
+.venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt 
 ## when presented with an Error install packages directly (skip the file)
 python -m pip install Flask==3.0.3 Flask-CORS==4.0.1 SQLAlchemy==2.0.32 PyMySQL==1.1.1 python-dotenv==1.0.1 requests==2.32.3
