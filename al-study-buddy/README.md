@@ -7,13 +7,15 @@ A tiny end-to-end app for beginners: paste notes → get AI-generated Q/A → fl
 ### 1) Clone and install
 ```bash
 python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r requirements.txt 
+## when presented with an Error install packages directly (skip the file)
+python -m pip install Flask==3.0.3 Flask-CORS==4.0.1 SQLAlchemy==2.0.32 PyMySQL==1.1.1 python-dotenv==1.0.1 requests==2.32.3
 ```
 
 ### 2) Configure database
 Create a MySQL database and user, then set `DATABASE_URL` in `.env` like:
 ```
-DATABASE_URL=mysql+pymysql://USER:PASS@localhost:3306/study_buddy
+DATABASE_URL=mysql+pymysql://USER:YOUR_PASSWORD@localhost:3306/study_buddy
 ```
 Or for a quick local try, omit `.env` and SQLite fallback `study_buddy.db` will be created.
 
